@@ -4,7 +4,7 @@ title: teaching
 ---
 
 navigate //
-[home](https://danielmichaelcicala.github.ioindex.html) //
+[home](https://danielmichaelcicala.github.io/index.html) //
 [events](events.html) //
 [research](research.html) //
 [teaching](teaching.html)
