@@ -1,9 +1,4 @@
-# Set the theme.  
-# Remote theme format user/theme
-
-# This is the default format.
-# For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink: /:categories/:year/:month/:day/:title
+theme: jekyll-theme-minimal
 
 exclude: [".rvmrc", ".rbenv-version", "ReadMe.md", "Rakefile", "changelog.md", "License.md"]
 highlighter: rouge
@@ -106,5 +101,3 @@ JB :
   # and include your custom code. Your custom file must be defined at:
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
-
-theme: jekyll-theme-minimal
