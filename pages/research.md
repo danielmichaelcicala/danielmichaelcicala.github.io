@@ -68,10 +68,10 @@ syntax for graphical calculi // [ct2017](http://www.mat.uc.pt/~ct2017/)
 
 --- **articles** ---
 
-* [bicategories of relations](https://golem.ph.utexas.edu/category/2018/02/cartesian_bicategories.html) 
+* [cartesian bicategories](https://golem.ph.utexas.edu/category/2018/02/cartesian_bicategories.html) : 
 generalizing a relations with bicategories
 
-* [notions of lawvere theories](https://golem.ph.utexas.edu/category/2017/05/a_discussion_on_notions_of_law.html) 
+* [notions of lawvere theories](https://golem.ph.utexas.edu/category/2017/05/a_discussion_on_notions_of_law.html) :
 enriching Lawvere's approach to universal algebra
 
 ​
