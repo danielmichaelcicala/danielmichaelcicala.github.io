@@ -3,13 +3,13 @@ layout: page
 title: events
 ---
 
-**navigate** //
+navigate //
 [home](https://danielmichaelcicala.github.io/index.html) //
 [events](events.html) //
 [research](research.html) //
 [teaching](teaching.html)
 
-##### events
+--- **events** ---
 
 - applied category theory // oxford, uk // 15-26 july 2019
 (details forthcoming)
