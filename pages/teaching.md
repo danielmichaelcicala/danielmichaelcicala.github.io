@@ -3,19 +3,24 @@ layout: page
 title: teaching
 ---
 
-**navigate** //
+navigate //
 [home](https://danielmichaelcicala.github.ioindex.html) //
 [events](events.html) //
 [research](research.html) //
 [teaching](teaching.html)
 
-##### winter 2019
+--- **winter 2019** ---
 
-**math12 stats** @ rcc
+##### math12 stats @ rcc
 
-**math046 diff eq** @ ucr
+syl
 
-**math010a calc w several variables** @ ucr
+##### math046 diff eq @ ucr
 
+syl
+
+##### math010a calc w several variables @ ucr
+
+syl
 
 
