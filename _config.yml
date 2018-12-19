@@ -1,6 +1,6 @@
 # Set the theme.  
 # Remote theme format user/theme
-# remote_theme: username/theme
+theme: jekyll-text-theme
 
 # This is the default format.
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
