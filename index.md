@@ -8,7 +8,7 @@ navigate //
 [research](pages/research.html) //
 [teaching](pages/teaching.html)
 
-![](/assests/selfportrate.webp)
+![it's me](/assests/self.jpg)
 
 **contact**
 
