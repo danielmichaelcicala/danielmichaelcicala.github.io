@@ -1,7 +1,6 @@
 ---
 layout: page
 title: research
-tagline: notes on my research
 ---
 
 ### navigate
@@ -12,7 +11,7 @@ tagline: notes on my research
 - [teaching](pages/teaching.html)
 
 
-### research
+#### research
 
 My research belongs in the domain of network theory.  By
 nature, network theory is an interdisciplinary field, with
@@ -22,7 +21,7 @@ sciences.  Hence, there are both theoretical and applied
 arms to this field. My research strikes a balance between
 theoretical and applicable aspects.
 
-### papers
+#### papers
 
 **spans of cospans in a topos** (w. kenny courser) [(TAC)](http://www.tac.mta.ca/tac/volumes/33/1/33-01abs.html)
 
@@ -49,11 +48,11 @@ categorified Heisenberg algebra.
 
 (abstract) We consider the notion of a span of cospans and define, for them, horizonal and vertical composition. These compositions satisfy the interchange law if working in a topos C and if the span legs are monic. A bicategory is then constructed from C-objects, C-cospans, and doubly monic spans of C-cospans. The primary motivation for this construction is an application to graph rewriting.
 
-### talks
+#### talks
 
 * a lowkey introduction to synthetic differential geometry // [math connections](http://math.ucr.edu/~mathconn/index.html)
 
-​* a bicategorical syntax for pure state qubit quantum
+* a bicategorical syntax for pure state qubit quantum
 mechanics // [ams western sectional](http://www.ams.org/meetings/sectional/2243_other.html)
 
 * generalizing lawvere theories //  [ct2017](http://www.mat.uc.pt/~ct2017/)
@@ -69,7 +68,7 @@ syntax for graphical calculi // [ct2017](http://www.mat.uc.pt/~ct2017/)
 
 * quasi-categories // julie bergner's homotopy theory seminar
 
----- ARTICLES ----
+#### articls
 
 * [bicategories of relations](https://golem.ph.utexas.edu/category/2018/02/cartesian_bicategories.html) 
 discusses a bicategorical approach to generalizing the notion of a relation

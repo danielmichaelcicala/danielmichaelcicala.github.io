@@ -1,22 +1,21 @@
 ---
 layout: page
 title: events
-description: upcoming and past events.
 ---
 
-### navigate
+#### navigate
 
 - [home](index.html)
 - [events](pages/events.html)
 - [research](pages/research.html)
 - [teaching](pages/teaching.html)
 
-### events
+#### events
 
 - applied category theory // oxford, uk // 15-26 july 2019
 (details forthcoming)
 
-- ct2019 // university of edinburgh // 7-13 july 2019 // ([details])[http://conferences.inf.ed.ac.uk/ct2019/]
+- ct2019 // university of edinburgh // 7-13 july 2019 // ([details])(http://conferences.inf.ed.ac.uk/ct2019/]
 
 - jmm // baltimore, maryland // 16-19 jan 2019
 ([details](https://jointmathematicsmeetings.org/meetings/national/jmm2019/2217_intro))
@@ -30,12 +29,12 @@ apr 2018 ([details]())
 - ams western sectional  // riverside, california // 4,5 nov
 2017 ([details]())
 
-- kan extension seminar // virtual // winter \& spring 2017 ([details](http://www.math.jhu.edu/~eriehl/kanII/))
+- kan extension seminar // virtual // winter & spring 2017 ([details](http://www.math.jhu.edu/~eriehl/kanII/))
 
 - category theory conference // vancouver, canada // 22 oct
 2016 ([details](http://www.mat.uc.pt/~ct2017/))
 
-- quantum physics \& logic conference // nijmegen,
+- quantum physics & logic conference // nijmegen,
 netherlands // 3-7 july 2017 ([details](http://qpl.science.ru.nl/))
 
 - homotopy type theory workshop // snowbird, utah // 4-10
