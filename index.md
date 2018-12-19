@@ -3,12 +3,12 @@ layout: page
 ---
 
 navigate //
-[home](index.html) //
+[home](/index.html) //
 [events](pages/events.html) //
 [research](pages/research.html) //
 [teaching](pages/teaching.html)
 
-![it's me](/assests/self.jpg)
+![](/assets/self.jpg)
 
 **contact**
 
