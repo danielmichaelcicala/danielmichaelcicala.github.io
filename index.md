@@ -2,17 +2,18 @@
 layout: page
 ---
 
-### navigate
+**navigate** //
+[home](index.html) //
+[events](pages/events.html) //
+[research](pages/research.html) //
+[teaching](pages/teaching.html)
 
-- [home](index.html)
-- [events](pages/events.html)
-- [research](pages/research.html)
-- [teaching](pages/teaching.html)
+**contact**
 
-### contact
-
-department of mathematics
+department of mathematics //
 university of california, riverside
+
+(email)
 cicala (at) math (dot) ucr (dot) edu
 
 

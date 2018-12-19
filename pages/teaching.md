@@ -3,14 +3,13 @@ layout: page
 title: teaching
 ---
 
-#### navigate
+**navigate** //
+[home](https://danielmichaelcicala.github.ioindex.html) //
+[events](events.html) //
+[research](research.html) //
+[teaching](teaching.html)
 
-- [home](index.html)
-- [events](pages/events.html)
-- [research](pages/research.html)
-- [teaching](pages/teaching.html)
-
-#### winter 2019
+##### winter 2019
 
 **math12 stats** @ rcc
 

@@ -3,19 +3,18 @@ layout: page
 title: events
 ---
 
-#### navigate
+**navigate** //
+[home](https://danielmichaelcicala.github.io/index.html) //
+[events](events.html) //
+[research](research.html) //
+[teaching](teaching.html)
 
-- [home](index.html)
-- [events](pages/events.html)
-- [research](pages/research.html)
-- [teaching](pages/teaching.html)
-
-#### events
+##### events
 
 - applied category theory // oxford, uk // 15-26 july 2019
 (details forthcoming)
 
-- ct2019 // university of edinburgh // 7-13 july 2019 // ([details])(http://conferences.inf.ed.ac.uk/ct2019/]
+- ct2019 // university of edinburgh // 7-13 july 2019 // ([details])(http://conferences.inf.ed.ac.uk/ct2019/)
 
 - jmm // baltimore, maryland // 16-19 jan 2019
 ([details](https://jointmathematicsmeetings.org/meetings/national/jmm2019/2217_intro))
