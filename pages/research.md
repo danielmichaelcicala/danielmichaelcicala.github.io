@@ -3,7 +3,7 @@ layout: page
 title: research
 ---
 
-**navigate** //
+navigate //
 [home](https://danielmichaelcicala.github.ioindex.html) //
 [events](events.html) //
 [research](research.html) //
