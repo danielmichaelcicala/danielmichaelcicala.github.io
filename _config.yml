@@ -1,18 +1,5 @@
 # Set the theme.  
 # Remote theme format user/theme
-theme: jekyll-text-theme
-text_skin: dark # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
-
-
-# Mathjax
-mathjax: true
-mathjax_autoNumber: true
-
-# Mermaid
-mermaid: true
-
-# Chart
-chart: true
 
 # This is the default format.
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
