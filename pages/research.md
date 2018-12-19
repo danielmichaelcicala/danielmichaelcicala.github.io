@@ -9,7 +9,7 @@ title: research
 [research](research.html) //
 [teaching](teaching.html)
 
-**research**
+--- **research** ---
 
 My research belongs in the domain of network theory.  By
 nature, network theory is an interdisciplinary field, with
