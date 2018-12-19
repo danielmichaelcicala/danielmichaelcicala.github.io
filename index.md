@@ -2,11 +2,13 @@
 layout: page
 ---
 
-**navigate** //
+navigate //
 [home](index.html) //
 [events](pages/events.html) //
 [research](pages/research.html) //
 [teaching](pages/teaching.html)
+
+![](/assests/selfportrate.webp)
 
 **contact**
 
