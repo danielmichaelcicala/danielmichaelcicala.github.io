@@ -1,7 +1,10 @@
 ---
 layout: page
-title: daniel cicala
+title: teaching
+tagline: information for teaching
 ---
+
+---- WINTER ----
 
 ### navigate
 
@@ -10,10 +13,11 @@ title: daniel cicala
 - [research](pages/research.html)
 - [teaching](pages/teaching.html)
 
-### contact
+#### stats @ rcc
 
-department of mathematics
-university of california, riverside
-cicala (at) math (dot) ucr (dot) edu
+#### math046 diff eq @ ucr
+
+#### math010a calc w several variables @ ucr
+
 
 
