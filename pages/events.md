@@ -23,10 +23,10 @@ navigate //
 2018 ([details](https://summit.statebox.org/index.html#/))
 
 - applied category theory // leiden, netherlands // 23-26
-apr 2018 ([details]())
+apr 2018 ([details](http://www.appliedcategorytheory.org/))
 
 - ams western sectional  // riverside, california // 4,5 nov
-2017 ([details]())
+2017 ([details](http://www.ams.org/meetings/sectional/2243_other.html))
 
 - kan extension seminar // virtual // winter & spring 2017 ([details](http://www.math.jhu.edu/~eriehl/kanII/))
 
