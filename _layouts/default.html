@@ -1,8 +1,54 @@
-{% include head.html %}
+<!DOCTYPE html>
+	<html>
 
-    <h1>{{ page.title }}</h1>
+	  <head>
+	    <title>{{ page.title }}</title>
+	    <style>
+	      body {background-color: #1f1e26;
+	        margin: 100px}
+	      h1 {color: white;
+	        font-family: georgia;
+	        font-variant: small-caps;
+	        margin-left: 25%}
+	      p {color: white;
+	        font-family: "Courier New";
+	        line-height: 1.5;
+	        font-weight: light;}
+	      p.notab {max-width: 75%;
+	        margin-left: 15%;
+	        margin-right: 15%;
+	        font-size: 14px;}
+	      p.tab { margin-left: 20%;
+    	        max-width: 75%;
+	         margin-right: 15%;
+	        font-size: 14px;}
+	      a:link {color: powderblue;
+	        background-color: transparent;
+	        text-decoration: none;}
+	      a:visited {color: pink;
+	        background-color: transparent;
+	        text-decoration: none;}
+	      a:hover {color: purple;
+	        background-color: transparent;
+	        text-decoration: none;}
+	      td {padding: 15px;}
+	      
+	    </style>
+	  </head>
 
-    {{ content }}
-    {% include nav.html %}
-    
-{% include foot.html %}
+	  <body>
+	    <nav>
+	    <p>
+	      <a href="/danielmichaelcicala.github.io/">home</a>
+	      <a href="/danielmichaelcicala.github.io/events">events</a>
+	      <a href="/danielmichaelcicala.github.io/research">research</a>
+	      <a href="/danielmichaelcicala.github.io/teaching">teaching</a>
+	    </p>
+	    </nav>
+
+	    <article>
+	      {{ content }}
+	    </article>
+	</body>
+
+	</html>
