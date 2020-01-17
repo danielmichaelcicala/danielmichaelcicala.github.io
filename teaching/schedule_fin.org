@@ -1,0 +1,43 @@
+#+TITLE: Math for Finance Schedule
+#+STARTUP: showall indent align inlineimages nologdone
+
+
+
+* Week 1 (Wed only)
+** Course Introduction
+*** Syllabus
+*** Notation Dictionary
+**** Heavy use of notation for specific functions, e.g. V(t) is the value of a portfolio at time t.  We should create a running dictionary.
+*** Intro to Octave (open source MATLAB)
+*** Background math needed
+**** All in appendix, but more rigorous than needed
+**** Calculus
+***** Lagrange multipliers
+***** Taylor polynomials
+**** Probability
+***** Random Variables
+***** probability distributions
+*** Background finance needed
+**** Definitions
+***** stock, bond, put, security, long position, short position, short selling, arbitrage,
+* Week 2
+** 1.1, 1.2, 1.3
+** 1.4, 1.5, 1.6
+* Week 3
+** 1.7, 1.8, Case 1 Analysis
+
+* Week 4
+* Week 5
+* Week 6
+* Week 7
+* Week 8
+* Week 9 (spring break)
+* Week 10
+* Week 11
+* Week 12
+* Week 13
+* Week 14
+* Week 15
+* Week 16 (Mon only)
+*
+

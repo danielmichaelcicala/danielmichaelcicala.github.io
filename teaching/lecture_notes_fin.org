@@ -1,0 +1,563 @@
+#+TITLE: Lecture Notes: Math4450 (Math for Finanance)
+#+STARTUP: showall indent align inlineimages nologdone
+
+* 1.0 Case study
+
+  Read the case study.  The point of this chapter is to be
+  able to anaylize he situation. 
+
+  Cursory analysis:
+** Option: Make the exchange now
+   Make the exchange and 
+   - sit on the $100k until it's time to buy the equipment,
+     or
+   - invest the $100k and buy the equipment at the right
+     time.  Invest means possibly losing money.
+** Option: Don't make the exchange
+   -  gamble on a more favorable exchange rate at time of purchase
+   
+* 1.1 Basic Notions and Assumptions
+
+This entire class is about modeling financial instruments
+using mathematical objects. This gives a precise language to
+reason about the financial instruments. In Section 1.1, we
+introduce the idea of a model and some basic assumptions.  
+
+** What is a risk-free asset and risky security? Examples? Explain the difference by modeling with a deterministic or stochastic function.
+
+** How can we model Return? Find analogies to other dynamical systems in, say, physics.
+
+** Our task is to build a "mathematical model". What is a model? What are other basic mathematical models (think diff eq and physics)? Why construct them? What considerations are there when building a model?  Do models perfectly represent the associated phenomonion? If not, what goes wrong and why should we use them?
+
+** What is the model for A(t) and S(t)? What assumptions do we make and what are the meaning of the assumptions?
+
+** What is the meaning of V(t)= xS(t)+yA(t)? Is it deterministic or stochastic? What is the Return of V(t)? How does it relate to the other Returns?
+
+** For V(t), what do x,y represent?  Naive answers only: what restrictions should place on the values x,y can attain? What are the actual values we allow (ans: x,y \in \RR).  Fractional values are *divisiblity* (waht's that?).  Can I buy \pi shares of Apple Stock?  If not, why allow it?  Positive x (or y) is called a *long position*, negative a *short position*.  Example of short risk-free security is selling a bond or borrowing cash (a loan).  Example of short risky security is to borrow a stock and sell it.
+
+* 1.2 No-Arbitrage Principle
+  
+In this section, we formulate the most fundamental
+assumption about markets: it is impossible to make a profit
+through a risk-free security without making an investment.
+
+** Does baking this into our model mean that this is necessarily true in real world markets?
+
+Ans: No.  Arbitrage can arise by taking advantage of the
+price differentials of two different markets. Here's an
+example.
+
+Suppose that today, 1EUR=1.5USD and money is lent at 10% daily
+interest. For tomorrow, the USD remains fixed and the price
+of the Euro can decrease by 20% with probability p=0.5 and
+encrease by 10% with probability 1-p=0.5. (Draw a binomial
+tree for Day = 0,1,2,..). Is there an opportunity for
+arbitrage here?
+
+Yes. Today, borrow 1EUR and sell it for 1.5USD (that's
+market price).  Take that money and lend it at teh
+10%. Tomorrow, you have 1.65USD in cash. Now, you can buy
+1EUR to return the borrow 1EUR for one of the two prices:
+either 1.5*(1+0.10)=1.65USD or 1.5*(1-0.2)=1.2USD. So either
+you've made 1.65-1.65=0USD if Euro increased or
+1.65-1.2=0.45USD if the Euro decreased. Hence, you can make
+0.45USD with probability 0.5 and zero risk of losing money.
+
+In reality, if this situation were to arise, it'd be very
+short lived because of this opportunity for arbitrage and
+then the markets would adjust by changing the value of the
+USD or another way.  Of course, the shifting value of the
+USD would cause other effects in other markets and causing
+the effects to be very difficult to track, or model.  
+
+** Example 1.3, 1.4
+
+** Assumption: No-arbitrage.  There is no portfolio with V(0)=0 such that (1) V(T)=>0 with probability 1 and (2) V(T)>0 with non-zero probability. Note that V(0)=0 means there is no assets, P( V(T)=>0 ) = 1 means there is no risk of loss, and P( V(T) > 0 ) > 0 means a profit is possible.
+
+** In practice, arbitrage is possible but rare.  Thus this assumption may be considered. Occams Razor suggests that, if we do take this assumption, the resulting theory better be worth it.  It turns out to be so, but we can't see that yet.  Keep track of everytime No-Arbitrage is used.
+
+* 1.3 One-Step Binomial Model
+
+  In sections 1.1 and 1.2, we've laid out rules that a
+  finanical model must follow. Once the rules are set, we
+  don't yet know that there exists a mathematical object that
+  follows the rules.  In this section, we find a simple model
+  that does follow all the rules. By the way, what are all
+  the rules? Be sure to draw the tree diagram for the
+  binomial model.
+
+** Example 1.6
+
+   Given the following data, what are the returns? Is arbitrage
+   possible? Try a few values of p.
+
+*** S(0)=100, P( S(T)=125 )=p, and P( S(T)=105 ) = 1-p.
+*** A(0)=100, A(T)=110
+
+** Proposition 1.7 -- Fundamental Theorem of Asset Pricing
+
+Cover a intuitive path through the proof using the
+reasoning: buy cheap assets and sell expensive ones.
+
+Note, the proof of this gives a recipe to find arbitrage opportunities.    
+
+* 1.4 Risk and Return
+
+  In this section, recall *expectation* and *standard
+  deviation* of discrete random variables. Here, we look at
+  an investment scenario to become familiar with an
+  analytical approach to the provided information
+
+** Scenario
+
+   A(0) = 100
+   A(T) = 110
+   S(0) = 80
+   S(T): P( S(T) = 100 ) = 0.8
+         P( S(T) = 60 )  = 0.2
+
+   Given $10k to invest, which portfolio is preferable: 
+   (1) Shares of (risky,risk-free) = (50,60)
+   (2) (0,100) (risky, risk-free)
+   (3) (125,0)
+
+   To analyse this, we'll find the expected return and risk
+   of each position. Before calculating the risk, use
+   intuition to rank the 3 poisitions in order of risk.
+
+*** Case 1 
+    
+    All the uncertainty comes from the 50 shares of stock.
+    There are two posible closing poisitions
+
+    V(T): P( V(T)= 11600 ) = 0.8, P( V(T)=9600 ) = 0.2
+          ~how do we get 11600 and 9600?~
+
+    K(T): P( K(T)=16% ) = 0.8, P( K(T)=-4% ) = 0.2
+          ~how do we get 16% and -4%~
+
+    Expected Return: 
+      E(K_V) = 0.16*0.8 + (-0.04)*0.2 = 0.12
+    Risk:            
+      \sigma_V = \sqrt{ (0.16-0.12)^2*0.8 + (-0.04-.12)^2*.2 } = 0.08
+   
+*** Case 2
+
+    No stock so no uncertainty. There is one posible closing poisitions
+
+    V(T)= 110*100 shares = 11000
+
+    K(T)= 0.10
+
+    Expected Return: 
+      E(K_V) = 0.10
+    Risk:            
+      \sigma_V = 0
+
+*** Case 3
+
+    All the uncertainty comes from the 125 shares of stock.
+    There are two posible closing poisitions
+
+    V(T): P( V(T)= 12500 ) = 0.8, P( V(T)=7500 ) = 0.2
+        
+    K(T): P( K(T)=0.25% ) = 0.8, P( K(T)=-0.25% ) = 0.2
+    
+    Expected Return: 
+      E(K_V) = 0.25*0.8 + (-0.25)*0.2 = 0.15
+    Risk:            
+      \sigma_V = \sqrt{ (0.25-0.15)^2*0.8 + (-0.25-.15)^2*.2 } = 0.20
+
+  At this point in our education, there are only personal
+  proclivities to rely on when deciding between
+  positions. Further analysis of portfolio positions is in
+  Chapter 3
+
+** Exercise 1.4
+
+* 1.5 Forward Contracts
+
+** Def.
+
+   A *forward contract* is an agreement to buy or sell a
+   risky asset at a specified future time T for a fixed
+   price F.  
+
+   Which of the following is a forward contract
+   - We agree that, for $10k, I'll buy your car on Jan 01,
+     2025 if the Yankees win the World Series in preceeding
+     year.
+   - We agree that I'll buy your car on Jan 01, 2025 for
+     $10k if the Yankees win the World Series in the
+     preceeding year or for $12,000 if they don't
+   - We agree that I'll buy your car on Jan 01, 2025 for the
+     Kelly Blue book value
+   - We agree that I'll buy your car on Jan 01, 2025 for
+     $10k
+   - We agree that I'll buy your car and give you $7500 now
+     and you'll give me your car on Jan 01, 2025.
+
+  The investor who *buys* the asset is said to enter into a
+  *long forward position* and the investor who *sells* the
+  asset is said to enter into a short forward position.
+  (Cf. that with the definition of long/short used in the
+  portfolio (x,y))
+
+** Example
+
+   Is a forward position a risky or risk-free position? The
+   following example clarifies this.
+
+   Suppose a forward price is F=$80. On the delivery date, if
+   the market price of the asset is S(T)=$84, the long forward
+   position gains S(T)-F=$4 and the short forward position looses
+   $4.  If the market price of the asset is S(T)=$75, the long
+   forward position looses S(T)-F=-$5 and the short poisition gains
+   $5.
+
+   Now, answer the above question.   
+ 
+** New portfolio
+
+   Before, portfolios were (stocks,bonds).  Now, they are
+   (stocks,bonds,forwards). 
+
+   In the above example, suppose the party in the long
+   forward position had---before entering the position---the
+   portfolio (10,15,5). What is their portfolio once
+   entering the position? Ans: (10,15,6)
+
+   Given a portfolio (x,y,z), what is its initial value? 
+   Ans: V(0)= xS(0) + yA(0).  
+
+   Why doesn't z appear?
+   Ans: b/c no money is exchanged when when entering into a
+   forward position.
+
+   Given a portfolio (x,y,z), what is its value at time T
+   (the delivery date of a forward contract?
+   Ans: V(T) = xS(T) + yA(T) + z( S(T)-F )
+
+** Example
+
+Consider the portfolio (10,0,0) on day 0. On day 1, we enter
+into a forward position to sell one stock---S(0)=100, S(T)={
+110 w. p= .9 / 80 w. p= .1}---for F=$105 at time T.  Find
+the intial and final values for long and short
+positions. Which position is better?
+
+*** Long
+
+V(0) = 10*100 = 1000 
+V(T) = 
+  { 10*110 + 1*(110-105) w p=0.9 / 10*80 + 1*(80-105) w p=0.1 }
+  
+*** Short
+
+V(0) = 10*100 = 1000
+V(T) = 
+  { 10*110 - 1*(110-105) w p=0.9 / 10*80 - 1*(80-105) w p=0.1 }
+** No-Arbitrage 
+
+Assumption for our modeling:
+There is no portfolio (x,y,z) that includes a position z in
+forward contracts and has initial value V(0)=0 such that
+V(T) => 0 with probability 1 and V(T)>0 with p>0.  
+
+This assumption means that the price of a forward contract F
+is restricted to values that don't allow arbitrage. For
+instance, suppose we don't know what F is. Then I can enter
+into a short forward position by buying the associated asset
+by borrowing money at interest r (remember, I can't spent
+cash because we're assuming that V(0)=0) I have else we're
+not finding arbitrage).  On the delivery date, I sell the
+asset at price F and must payback the loan with interest.
+If (F<interest payment) then I've lost money so wouldn't
+have entered into the short position to begin with. If
+(F>interest payment) I've earned the difference F -
+InterestPayment without spending money (V(0)=0) and taking
+no risk (V(T)=>0 with p=1). Hence F = InterestPayment for
+arbitrage to not exist.
+
+** Proposition 1.10 (no arbitrage)
+
+Given a risky-security with no cost to carry it, then the forward
+price of any forward contract exchanging the security must
+be F = S(0)(1+K_A) or an arbitrage opportunity will exist.
+
+(recall: K_A = ( A(T) - A(0) / A(0) ))
+
+Go through the proof. It's a recipe to capitalize off the
+arbitrage arising when F =/= S(0)(1+K_A). 
+
+** Exercise 1.5
+
+Find the arbitrage opporunity in the following scenario: 
+A(0)=100 / A(T) = 112 / S(0) = 34 / F = 38.60 
+* 1.6 Call and Put Options
+
+These are similar to Forward contracts.
+
+** Def 
+A *call option* with *strike price* 100USD and *exercise
+time* T is a contract giving the holder the right (not
+obligation) to buy a share of stock for 100USD at time T.
+
+** Call option as a Random variable
+
+Consider the about call option.  At time T, the stock price
+is in one of two states (1) S(T) =< 100 or (2) S(T) > 100.  
+
+Which is preferable for the person holding the call option? 
+Ans: (2) because you, assuming you exercised the right to
+buy the stock, paid 100USD for a stock worth more than
+that. State (1) renders the call option worthless, so you
+wouldn't exercise the right to buy the stock.
+
+The payoff of a call option is a random variable involving
+S(T), the spot price or price of the stock at time T, and X
+the strike price. 
+C(T) = max{ S(T)-X , 0}
+
+C(0) denotes the value of the option, i.e. the price the
+contract can be bought or sold today.
+
+** Call option vs forward contract?
+
+Forward contract obligates the stock to exchange hands, call
+options provides the right to buy a stock but no
+obligation.  
+
+In practice, it is typical to include a premium price to buy
+a call option, whereas there is no such price to purchase a
+forward contract.
+
+** Portfolio
+
+For a market place involving risky,risk-free, and options,
+the portfolio becomes (x,y,z) and the value of the portfolio
+is
+
+V(0) = xS(0) + yA(0) + zC(0)
+V(T) = xS(T) + yA(T) + zC(T)
+
+As before, we need to extend the no-arbitrage principle to
+include portfolios involving call options.
+
+** No-Arbitrage
+
+Assumption: There is no portfolio (x,y,z) that includes a
+position z in call options and has V(0)=0 such that V(T)>=0
+with p=1 and have V(T)>0 with p>0.
+
+This assumption constrains the value of C(0). Initial guess
+about what it should be?  Positive or negative? 
+Ans: positive because when I buy a call option for C(0),
+then C(0) is ensured to make me money because I'll buy the
+stock only when S(T) > "price agreed upon". Otherwise, I'll
+not exercise the option and make/loss nothing.  So, C(0) is
+expectedly some average between nothing and the amount to be
+gained in case S(T) > "strike price".  
+
+** Pricing the call option contract
+
+A call option contract is offering for sale a position in
+stocks and bonds (risky and risk-free assets). Therefore,
+C(T)= xS(T) + yA(T) where (x,y) is written into the
+contract. Also in the contract is the strike price X. Recall
+C(T) = max{S(T)-X , 0}. How can we come up with a value C(0)
+for sell this contract for?
+
+S(T) is a random variable, so C(T)= xS(T)+yA(T) is too.
+Really, we have that max{ S(T)-X , 0} = xS(T)+yA(T) which
+gives two equations, one for each possible value of
+S(T). Then, we can solve this system of equations for x,y
+and plug those into C(0)=xS(0)+yA(0).
+
+Example:
+Let A(0)=100, A(T)=110, S(0)=100, S(T)={120 (prob. p), 80
+(prob. 1-p)}. We'll consider a call option with strike price
+X=100. It follows that C(T)=max{S(T)-X,0}= {20 (prob p), 0
+(prob 1-p)}.  Hence the SOE from C(T)=xS(T)+yA(T) is
+20=x120+y110 // 0=x80+y110. Solve for (x,y)=(1/2,-4/11).
+What is the meaning of this (x,y)? It is the number of risky
+and risk-free assets needed to ensure that the value of the
+call option matches the portfolio regardless the performance
+of the stock.  Choosing anyother (x,y) means that there will
+be a difference between C(T) and the value of the portfolio
+that depends on the value of the stock. Armed with (x,y)
+that equalizes the call option and the portfolio (x,y) we
+find C(0) as follows:
+C(0)=xS(0)+yA(0)=(1/2)(100)+(-4/11)(100)=13.64
+This number is the price for the right to purchase a risky
+asset for X at time T.  
+
+We can turn this into a proposition
+
+** Proposition 1.2---No arbitrage for call-options
+
+If the option can be replicated by investing in the
+portfolio (x,y) of risky and risk-free assets, then
+C(0)=xS(0)+yA(0) or an arbitrage opportunity arises.  
+
+Go through the proof with the perspective that it's a recipe
+to create arbitrage.  Note the stragy of the proof is the
+same as earlier proofs: sell short expensive assets and buy
+inexpensive assets.
+
+** Observations:
+
+1) The probability of the stock increasing or deacreasing
+   played no role in determining the value C(0). 
+2) For single-step binomial model of the market place, call
+   options are redundent because they can be created
+   replicated by a portfolio of risky and risk-free assets.
+   Upon moving to a multi-step binomial model of the market,
+   the task of replicating a call option with a portfolio of
+   risky and risk-free assets becomes very difficult (but
+   still possible).  In practice, you'd need to rebalance
+   the position in the portfolio which induces costs of
+   business for the seller of the call option.
+
+** Exercises 1.6, 1.7
+
+** Put's
+
+A *put option* with *strike price* 100USD and exercise time
+T gives the right (not obligation) to SELL one share of
+stock at time T. 
+
+This option is worth nothing P(T)=0 if the stock increases and is
+worth P(T)=X-S(T) if the stock decreases. Therefore, 
+P(T)=max{X-S(T),0}.
+* 1.7 Foreign Exchange
+
+Is foreign currency a risky or risk-free security?
+Ans: risky.  We don't know it's value in the future.
+
+Is foreign currency equivalent to a stock?  Why consider it
+seperately?
+Ans: If I buy a stock, say 100 shares of Home Depot, then
+that stock doesn't earn any risk-free income (assuming no
+dividends).  If I buy 100CAD, then I can earn risk-free
+income by placing it into a bank-account w interest or buy a
+risk-free security.
+
+** Forward contracts for foreign dollars
+
+Recall the price to buy a risky asset with a forward
+contract: F= S(0)(1+K_A) = S(0)A(T)/A(0).  We'll adjust this
+accordingly.
+
+Say you want exactly 1 unit of foreign currency at time
+T. How many units should you buy today?
+ANS: A_f(0)/A_f(T). At time T, the value of having that many
+units of foreign currency is (A_f(0)/A_f(T))A_f(T)=A_f(0)
+which is the value of one unit of foreign currency at
+time 0. 
+
+1.5USD=1CAD at t=0 and 1.2USD=1CAD at t=T. 
+Buy 1.5/1.2 units of CAD at time 0. At t=T, UNITS x VALUE =
+(1.5/1.2)x(1.2USD) = 1.2 USD which is worth 1CAD.
+
+Observe: A_f(0)/A_f(T) = 1/(1+K_f).  
+
+Multiply the usual forward contract price by this factor to
+get
+F= S(0)(1+K_h)/(1+K_f).  Here, subscript h means the rate of
+return on home currency bond.  
+
+*** No-Arbitrage for foreign currency bond
+
+Exercise: Write the statement and prove it.  Follow the
+strategy of the previous no arbitrage proofs.
+
+*** Exercise 1.10
+
+** Foriegn Currency Options
+
+*** Example 1.18
+
+Pounds sterling (GBP) can be considered as a risky asset on
+the USD market.  Suppose returns on USD bonds is K_USD =
+0.05 and on GBP is K_GBP = 0.03.  
+
+Consider a call option on GBP with strike price X=1.64USD /
+pound in a binomial model market with 
+
+S(0)=1.62 USD/GBP 
+S^u(T) = 1.84USD/GBP 
+S^d(T) = 1.46USD/GBP 
+
+(using u for up price and d for down price and suppressing
+probabilities since they play no role).
+
+To price this call option, we need to replicate it using
+risky and risk-free securities: C(T)= xS(T)+yA(T). 
+
+~What is S(T) and A(T) here?~
+
+(i)   x(1 + K_GBP)S^u(T) + y(1+K_USD) = S^u(T) - X
+(ii)  x(1 + K_GBP)S^d(T) + y(1+K_USD) = 0
+  
+Notes: 1+K_xxx is the risk free amount earned from buying
+pounds and they using those pounds to invest risk-free.  
+
+RHS come from exercising the option when the risky asset
+increases and not exercising the option when the risk
+descreases.  A(T) = 1 because A(T) is the value of the USD
+in USD's.  
+
+Solve this to get x = 0.5110 GPB's and y = -0.7318 USD. 
+
+The price of the call option is C(0)=xS(0)+yA(0) which we
+plug in things, plus use A(0)=1 to get 0.0960.
+
+*** Exercise 1.11
+
+* 1.8 Managing risk with Options
+
+Recall in Section 1.6, we used a call option with strike
+price 100 and initial cost C(0)=13.64.  This is based on a
+stock with S^u(T)=120 and S^d(T)=80. Hence C(T) has
+C^u(T)=20 and C^d(T)=0.
+
+Compare the two investment options, given initial wealth of
+1kUSD.  
+
+(1) Buy 10 shares of stock worth S(0)=100.  At t=T, the
+stocks will be worth 10S(T) = {1200 (stock increases) or 800
+(stock decreases)}.
+
+(2) Buy 1000/13.64 = 73.33 call options. At t=T, this will
+be worth 73.33C(T) = {73.33*20 = 1466.67 | 73.33*0 = 0}
+
+Compare these two investment options. (1) has a much better
+worse case scenario but (2) has a much better payoff, 46.67%
+vs 20% so more than double.
+
+** Exercise 1.12
+
+In the above setting, find the final wealth of the investor
+whose initial capital of 1kUSD is split half in stock and
+hald in options.
+
+** Reducing risk with options
+
+Consider an investor planning to buy stock in the
+future. The share price today is S(0) = 100USD. But the
+investor only has funds available at t=T, for when S(T)=
+{160 (p) , 40 (1-p)}. Again, A(0)=100, A(T)=110. Here are
+two strategies
+
+1) Wait until time T then purchase the stock for S(T).
+2) At t=0, borrow money to buy a call option with strike
+   price 100USD, then at time T repay the loan with interest
+   and purchase the stock, exercising the option if the
+   price increases.  
+
+Strategy 1) is risky because the range of purchase price is
+so wide.  Strategy 2) reduces the risk, that is narrows the
+gap of the purchase price. Let's see how.
+
+At t=0, borrow C(0)=31.81USD to pay for the option.  
