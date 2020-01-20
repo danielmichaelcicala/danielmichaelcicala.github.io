@@ -2,7 +2,7 @@
 #+STARTUP: showall indent align inlineimages nologdone
 
 * Week 1 (WF classes only)
-** Intro to Class
+** (22Jan) Intro to Class
 *** Syllabus
 *** Overview of class
 *** Assumed knowledge
@@ -10,20 +10,20 @@
 **** graphing basic functions
 **** basic algebra (simplifying expressions, esp fractions like (a+b)/a)
 **** solve an equation for a specified term
-** Functions
+** (24Jan) Functions
 *** Input/Output machine, domain/image (vert. line test)
 *** Examples: real world (seating chart, etc), polynomials, rational functions, absolute value, piecewise, algebraic functions
 * Week 2
-** Inverse Functions
+** (27Jan) Inverse Functions
 *** Horizontal line test
 *** Exp and Log
 *** Trig and ArcTrig
-** Algebra of Functions
+** (29Jan) Algebra of Functions
 *** Shift, Stretch, Reflect
 *** Add/Sub
 *** Mult/Divide
 *** Compose
-** Limits (Graphically)
+** (31Jan) Limits (Graphically)
 *** Motivate with tangent lines
 *** Definition
 *** Graphical intuition
@@ -31,17 +31,23 @@
 **** Thm. two-sided limit exists iff each one-sided exists
 *** To infinity
 * Week 3
-** Limits (Analytically)
+** (03Feb) Limits (Analytically)
 *** Limit laws
 *** Find limits for the following
 **** piecewise
-**** lim f(x) as x-->a and f(a) DNE
+**** lim f(x) as x-->a and f(a) DNE 
+e.g. x-3 / x^2-9 as x-->3
+**** lim x-->inf
+**** 
 *** Squeeze theorem
-** Continuity
+** (05Feb) More limits
+** (07Feb) Continuity
 *** Graphical intuition
 *** Definition
 *** Theorems: compatiblility w algebra of functions (esp composition), IVT
-** Introducing the derivative
+* Week 4
+** (10Feb) Chapter 2 Review
+** (12Feb) Introducing the derivative
 *** Derivative as slope: geometry
 **** tangent line w slope f(x + delta x) - f(x) / delta x as delta x --> 0
 *** Derivative as slope: analysis
@@ -56,8 +62,7 @@ that squaring it equals zero (kind of but either way we
 ignore it). So we get df = 2xdx.  
 
 *** Examples from physics
-* Week 4
-** Derivative as a function
+** (14Feb) Derivative as a function
 *** Start w derivative at a point and let point vary
 **** Notation: f', df/dx = d/dx(f(x)), dy/dx = d/dx (y), y', d/dx(-) as operator
 ***** Exercise: write d/dx (f(x)) in plain english, so "take the x-derivative of the function f", or d/dx(x^2)*d/dx(2x) is take the derivative of x^2 and the derivative of 2x then multiply them together, etc
@@ -71,7 +76,8 @@ ignore it). So we get df = 2xdx.
 *** Non-differentiable functions
 **** Diff ==> Cont
 **** Geometry: diff means no corners, cont means no breaks
-** Rules of differentiation
+* Week 5
+** (17Feb) Rules of differentiation
 *** Finding derivatives using limit definition can be hard. Maybe there's an easier way? Consider, human powered car (Fred flinstone) vs motor powered car.
 **** Abstraction allows us to find limits of *classes* of functions, not *instances* of functions
 ***** d/dx (c) = 0 (Note general c, not, say, 9. Now we never need to do that again)
@@ -101,7 +107,7 @@ added area is c*df.
 *** Examples 
 **** finding n-th order derivatives of given polynomials
 **** tangent lines (give hint: derivative is slope)
-** More rules of differentiaion: product and quotient
+** (19Feb) More rules of differentiaion: product and quotient
 *** Complecated functions are often build from multiplying or dividing simpler functions. Maybe there's a way to derive hard functions by deriving the easier functions of which they are comprised.  Just like breaking a hard task into easier piece.  
 **** For example: deriving (\pi x^7 - 5.231 x^4 + 13)(x^4 - 4x^2 + 5x) or (x^3 + 3x^2 - 12 x) / (x^5 - 5x^3 + 1) are both hard.  But they are build from polynomials which are easier to derive.  Here, use a slide that shows d/dx (hard functions) = ? but we know d/dx (each polynomial) = the answer.
 **** Analogy w art: drawing a person is hard, but if we break it down into drawing a head, legs, etc, the task becomes easier.  
@@ -115,8 +121,7 @@ d(f*g) is the change in area when adding these boxes so its
 the sum of the three boxes.  However dx*dx is so small we
 ignore it leaving behind the two boxes hence the formuls. 
 *** Examples, include combining product and quotient rule.  
-* Week 5
-** Derivative of trig functions
+** (21Feb) Derivative of trig functions
 *** Start with (sin x)' using definition then getting to part where you use cos h - 1 / h and sin h / h
 *** Show that lim sinx/x =1 and lim cosx-1/x = 0 with animation
 **** Do examples using these facts, like lim_{x->0} sin(4x)/x, etc
@@ -125,7 +130,9 @@ ignore it leaving behind the two boxes hence the formuls.
 **** Do some examples, mix with other diff rules
 *** thm: use diff rules to find (tanx)', (secx)', etc. Leave one or two as exercise
 **** give table of trig derivatives.  
-** Derivatives in the world: rates of change
+
+* Week 6
+** (24Feb) Derivatives in the world: rates of change
 *** Things in the world change in time: populations, velocity of pendulum, amounts of money in bank accounts, etc.  Solicit examples from audience.  These physical phenominon can be modeled using derivatives. This allows us to make predictions and reason about physical processes.  
 *** Physics examples
 **** Show viedo of mars rover landing. Engineers know how fast the rover approaches the mars based on gravity and mass, etc. This knowledge allows them to design systems to counteract the velocity so that it lands at the desired speed (too fast it breaks). That is a much more complex situation involving many variables. We are starting with one variable.  Draw silly picture of rover landing.  There are several things at play: the position of the rover abouve the ground; but the position is changing and the measure of the rate at which it's changing is called velocity, which we'll see is a first derivative; but also because of gravity, the veloctiy is changing by getting faster and faster and the rate of change of velocity is called accelleration, which we'll see is a second derivative.
@@ -137,7 +144,10 @@ ignore it leaving behind the two boxes hence the formuls.
 ***** What is the average cost per widget if we make 10 widgets (ans C(10)/10) Repeat question for high numbers. Conclude avg cost is C(x)/x.  
 ***** Say we made 1000 widgets and want to know the total cost of making 100 more. That is C(1100)-C(1000). The average cost of those next 100 widgets is C(1100)-C(1000)/100.  To find the marginal cost, we use abstraction through calculus.  In general, the equation is C(x+delta x) - C(x) / delta x. As we take delta x to be smaller and smaller, i.e. delta x --> 0, we get C'(x).  
 **** Do some examples.
-** The chain rule
+** (26Feb) exam review
+** (28Feb) exam 1
+* Week 7
+** (02Mar) The chain rule
 
 *** A motivating example 
 
@@ -153,49 +163,41 @@ Let y mean the position of Yuri, u the position of Umberto,
 and x the position of Xander.  Then dy/dt is the velocity of
 Yuri, du/dt is the velocity of Umberto, dx/dt the velocity
 of Xander.  
-
-
-* Week 6
-** Mon 24 Feb
-** Wed 26 Feb
-** Fri 28 Feb
-* Week 7
-** Mon 02 Mar
-** Wed 04 Mar
-** Fri 06 Mar
+** (04Mar) Implicit Differention
+** (06Mar) Derive log/exp & arctrig
 * Week 8
-** Mon 09 Mar
-** Wed 11 Mar
-** Fri 13 Mar
+** (09Mar) Related Rates
+** (11Mar) Chapter 3 Review
+** (13Mar) Maxima and Minima
 * Week 9 
-** Mon 16 Mar // Spring Break
-** Wed 18 Mar // Spring Break
-** Fri 20 Mar // Spring Break
+** (16Mar) Spring Break
+** (18Mar) Spring Break
+** (20Mar) Spring Break
 * Week 10
-** Mon 23 Mar
-** Wed 25 Mar
-** Fri 27 Mar
+** (23Mar) Mean Value Thm
+** (25Mar) What derivatives tell us
+** (27Mar) Graphing Functions
 * Week 11
-** Mon 30 Mar
-** Wed 01 Apr
-** Fri 03 Apr
+** (30Mar) Optimization
+** (01Apr) Linear Approximation
+** (03Apr) L'Hopitals
 * Week 12
-** Mon 06 Apr
-** Wed 08 Apr
-** Fri 10 Apr
+** (06Apr)Antiderivatives
+** (08Apr)exam review
+** (10Apr)exam 2
 * Week 13
-** Mon 13 Apr
-** Wed 15 Apr
-** Fri 17 Apr
+** (13Apr)Areas under curves
+** (15Apr)Definite Integrals
+** (17Apr)FTC
 * Week 14
-** Mon 20 Apr
-** Wed 22 Apr
-** Fri 24 Apr
+** (20Apr)Working w Integrals
+** (22Apr)Substitution Rule
+** (24Apr)Chapter 5 Review 
 * Week 15
-** Mon 27 Apr
-** Wed 29 Apr
-** Fri 01 May
+** (27Apr)Open
+** (29Apr)Open
+** (01May)Open
 * Week 16
-** Mon 04 May // Final Class
-** Wed 06 May // Reading Day
-** Fri 08 May
+** (04May) Final Exam Review
+** (06May) Reading Day
+** (08May) no class

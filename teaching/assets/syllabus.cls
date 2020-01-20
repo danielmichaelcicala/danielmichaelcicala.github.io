@@ -963,7 +963,7 @@ D{\Fs}e{\Fs}p{\Fs}a{\Fs}r{\Fs}t{\Fs}m{\Fs}e{\Fs}n{\Fs}t  o{\Fs}f  M{\Fs}a{\Fs}t{
 \parbox[t]{3.5in}{
   \textbf{\unhcolor Instructor}: \Instructor \\
   \textbf{\unhcolor Email}: \Email \\
-  \textbf{\unhcolor Webpage}: \Webpages \\
+%  \textbf{\unhcolor Webpage}: \Webpages \\
 } \hfill \hspace*{1.1em}
 \parbox[t]{3.5 in}{
 \begin{flushleft}\vspace*{-1.8em}
