@@ -12,7 +12,7 @@
 **** solve an equation for a specified term
 ** (24Jan) Functions
 *** Input/Output machine, domain/image (vert. line test)
-*** Examples: real world (seating chart, etc), polynomials, rational functions, absolute value, piecewise, algebraic functions
+*** Examples: real world (seating chart, etc), polynomials, rational functions, absolute value, piecewise, algebraic functions, trig/exp/log
 * Week 2
 ** (27Jan) Inverse Functions
 *** Horizontal line test
