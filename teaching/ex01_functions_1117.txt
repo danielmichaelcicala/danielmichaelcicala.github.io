@@ -1,0 +1,25 @@
+MA	Classify the function $$f(x)=x^3+2x^2-1$$. Check all that apply.	polynomial	correct	rational	correct	triginometric	incorrect
+MA	Classify the function $$f(x)=\frac{x-1}{x+2}$$. Check all that apply.	polynomial	incorrect	rational	correct	algebraic	incorrect
+MA	Classify the function $$f(x)=\sqrt{-x}$$. Check all that apply.	polynomial	incorrect	rational	incorrect	algebraic	correct
+MA	Classify the function $$f(x)=\begin{cases} x^2, & x \leq 0 \\ x+5, & x > 0 \end{cases}$$. Check all that apply.	polynomial	incorrect	rational	incorrect	piecewise	correct
+TF	Every rational function is a polynomial.	false
+TF	Every polynomial is a rational function.	true
+TF	Every polynomial is an algebraic function.	true
+TF	The function $$f(x)=|-x|$$ is an algebraic function.	false
+MC	Choose the domain of the function $$f(x)=x^5-3x^2+7$$.	all real numbers	correct	$$x<0$$	incorrect	$$x\geq0$$	incorrect
+MC	Choose the domain of the function $$f(x)=x^3-1$$.	all real numbers	correct	$$x<0$$	incorrect	$$x\geq0$$	incorrect
+MC	Choose the domain of the function $$f(x)=1+3x+3x^3$$.	all real numbers	correct	$$x<0$$	incorrect	$$x\geq0$$	incorrect
+MC	Choose the domain of the function $$f(x)=1-x$$.	all real numbers	correct	$$x<0$$	incorrect	$$x\geq0$$	incorrect
+MC	For the previous four questions, the functions were all in the class of...	polynomials	correct	piecewise functions	incorrect	logarithmic function	incorrect
+MC	For an arbitrary polynomial $$p(x)$$, what is its domain?	all real numbers	correct	not necessarily all real numbers	incorrect
+MC	Choose the domain of the function $$f(x)=\frac{(x+1)(x-1)}{(x-1)}$$	$$x \neq 1$$	correct	$$x \neq -1$$	incorrect	all real numbers	incorrect
+MC	Choose the domain of the function $$f(x)=\frac{x^2+2}{x^2+1}$$	$$x \neq 1$$	incorrect	$$x \neq -1$$	incorrect	all real numbers	correct
+MC	Choose the domain of the function $$f(x)=\frac{x+2}{x^2+3x+2}$$	$$x \neq -1,-2$$	correct	$$x \neq 1,2$$	incorrect	$$x\neq -1$$	incorrect	$$x\neq 1$$	incorrect
+MC	Choose the domain of the function $$f(x)=\frac{1}{3x+7}$$	$$x \neq -7/3$$	correct	$$x \neq 7/3$$	incorrect	$$x \neq -7$$	incorrect	all real numbers	incorrect
+MC	Choose the graph of the function $$f(x)=\begin{cases} x^2, & x < 0 \\ 5, & x \geq 0 \end{cases}$$	This one	correct		This one	incorrect
+MC	Choose the graph of the function $$f(x)=\begin{cases} 2, & x \leq -2 \\ -2, & x > 2 \end{cases}$$	This one	correct		This one	incorrect
+MC	What is the domain of the function $$f(x)=\sqrt{3x+2}$$?	$$x \geq -2/3$$	correct	$$x>-2/3$$	incorrect	$$x \leq -2/3$$	incorrect	$$x<-2/3$$	incorrect
+MC	What is the domain of the function $$f(x)=\sqrt{x^2-1}$$?	$$(-\infty,-1]\cup [1,\infty)$$	correct	$$(-\infty,-1)\cup (1,\infty)$$	incorrect	$$(-1,1)$$	incorrect	$$x \geq 1$$	incorrect
+MC	What is the domain of the function $$f(x)=\sqrt{-2x^2+12x+16}$$?	$$[2,4]$$	correct	$$(-\infty,2) \cup (4,\infty)$$	incorrect	$$(-\infty,-8) \cup (2,\infty)$$	incorrect
+MC	What is the domain of the function $$f(x)=1/\sqrt{x+2}$$?	$$x>-2$$	correct	$$x \geq -2$$	incorrect	$$x>2$$	incorrect	$$x \geq 2$$	incorrect
+MC	How is the function $$f(x)=|x+1|$$ defined at $$x=-2$$?	$$-x-1$$	correct	$$x+1$$	incorrect	$$x-1$$	incorrect
